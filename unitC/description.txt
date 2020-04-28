@@ -1,0 +1,38 @@
+Write a script that asks the user for various data, stores the data, performs various operations on that data and outputs the results, as follows:
+
+Display the user's name.
+Prompt the user for their name and store the result in a variable named yourName.
+Display (output) a greeting that says "Hello name", where name is in the variable yourName.
+Data types
+Store the value 10 in a variable named whatAmI.
+Display the type of variable whatAmI.
+Store the value 1.5 in the whatAmI variable.
+Display the type of variable whatAmI.
+Store the value "Hi" in the whatAmI variable.
+Display the type of variable whatAmI.
+Numbers
+Prompt the user for a number and store the result in a variable named num1. Hint: don't forget to convert the input string into an int. (Enter 5 when prompted).
+Prompt the user for a second number and store the result in a variable named num2 (Enter 3 when prompted).
+Subtract num2 from num1 and display the result in the following format: 5 - 3 = 2
+Divide num2 by num1 and display the result in the following format: 3 / 5 = 0.6
+Raise num1 to the power of num2 and display the result in the following format: 5 ** 3 = 125
+Multiply num1 by num2 to the power of num2 and display the result in the following format: 5 * 3 ** 3 = 135
+Calculate num1 mod num2 and display the result in the following format: 5 % 3 = 2
+Show these number exercises to the instructor.
+
+OPTIONAL CHALLENGES: If you would like to extend the basic lab, some possible enhancements are listed below. 
+These are simply for your learning and enjoyment, not for extra credit. 
+You may do any or all of the challenges.
+
+A store charges $10.00 for a case of soda (24 cans). They are having a 20% off sale, but the consumer must pay tax of 10% and a can deposit of 
+$.05 per can (there is no tax or discount on this deposit charge).
+Calculate and display the final price the consumer pays for the soda.
+
+A different store has a lower price where the final price the consumer pays for the soda is only $8.00. 
+The consumer has $50 and wants to buy as many cases of soda as they can (they cannot buy partial cases). 
+What is their change? Hint: use the mod function.
+
+Given the information in B) above, how many cases of soda can the consumer buy? 
+Hint 1: one approach is to use the fact that you know how much change there is and can therefore determine what was spent.
+Hint 2: a second approach is to use the floor division operator, //. Floor division
+is essentially division in which you round down the answer.
