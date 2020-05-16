@@ -1,0 +1,27 @@
+Write a script using turtle to draw a basic outline of a car, exactly as shown in the image (the balloons are optional).
+
+The outline of the car should be green and the tire outlines should be black. The line width should be three.
+
+The length of the car from bumper to bumper is 400 units and the height of the car (not including the tires) is 200 units. The height to the top of the hood and the height of the top of the trunk are 100 units, as are the heights of the front and back windows. The top of the car is 200 units long. Both the hood and the trunk are 100 units long. The tires have a radius of 50 units.
+
+The midpoint of the top of the car is located at the starting point of the turtle object (the 0,0 point).
+
+Some hints:
+
+To draw the straight lines, you can use the goto method and/or the move forward/backward + turn left/right approach, but it's probably best to choose a single technique and stick to it.
+It may be easier to do the tires last as they can be a bit trickier than the outline of the car. You may need to use penup/pendown when drawing various parts of the underside of the car.
+Lastly, it's a good idea to document your code with comments such as #front bumper, #trunk top, #left tire, etc. for each line drawn - it's easy to lose track of things!
+OPTIONAL CHALLENGES: If you would like to extend the basic lab, some possible enhancements are listed below. These are simply for your learning and enjoyment, not for extra credit. You may do any or all of the challenges.
+
+Write a function to draw a balloon and use it to draw balloons.
+The function should have two location parameters, x and y, which determine the starting point of the bottom of the balloon's string. The string is black and is 100 units long. The balloon is a circle with radius 50, has a color of blue, and a fillcolor of magenta.
+
+Call the function multiple times to place balloons in the sky over the car.
+
+Hint: As the turtle isn't guaranteed to have the orientation you want when you draw the balloon, use the setheading method within the function to orient the turtle. See: https://docs.python.org/2/library/turtle.html#turtle.setheading
+
+Create a screen object and set the background color to SkyBlue.
+To set the background color a screen object is required. See: Introduction for turtle
+
+Improve your car drawing
+Add additional elements to the scene - use your imagination. Some ideas: birds, a road, signs with text, etc. If you change the car, make a new script file - you will want to keep the original script to show the required basic car to the instructor. You could also improve the appearance of the car: streamlining, angled windshield, a driver, colored car body, more realistic tires, etc.
