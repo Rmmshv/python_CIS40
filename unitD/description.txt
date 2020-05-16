@@ -1,0 +1,26 @@
+CIS 40
+Unit 4 Assignment
+Write a script that uses functions to make some basic geometry calculations. The YouTube demo for functions structures things so that functions are written in a script shown in the text editor and then called from the shell. However, in this lab, we will structure things differently - both the functions and the function calls will all be contained in the script. The script will have all the functions at the top of the script, followed by the function calls and other code. The four functions are: welcome, printSquareArea, calcRectangleArea, printRectangleVolume. They will be called in this same order.
+
+Request the user's name and welcome the user.
+Write a function called welcome. The function will have no inputs or outputs. The function should prompt the user for their name and save the result in a variable called name. Then the function will use this name and print "Hello name, let's have some geometry fun!"
+Next, call the welcome function. Run the script to test it.
+Print the area of a square
+Write a second function called printSquareArea which has an input parameter called side. The function will calculate the area of the square and print it in a descriptive sentence.
+Call the printSquareArea function using a side of 3. Run the script again to test it.
+Print the area of a rectangle
+Write a third function called calcRectangleArea which has input parameters called length and width. The function will calculate and return the area of the rectangle.
+Call the calcRectangleArea function using a length of 4 and a width of 5, assigning the return value to a variable called rectangleArea. Then print the area of the rectangle in a descriptive sentence. Run and test the script.
+Print the volume of a box, where each side is a rectangle.
+Write a fourth function called printRectangleVolume which has input parameters called length, width, and height and which will calculate the volume of a rectangular solid. The function will calculate the area of the base of the solid by calling calcRectangleArea and then multiply this area by the height to obtain the volume. Print the volume using a descriptive sentence.
+Call the printRectangleVolume function using a length of 4, a width of 5, and a height of 6. Run and test the script.
+Show the script and results of executing the script to the instructor.
+OPTIONAL CHALLENGES: If you would like to extend the basic lab, some possible enhancements are listed below. These are simply for your learning and enjoyment, not for extra credit. You may do any or all of the challenges.
+
+Alternate implementation of Print the volume of a box.
+Write a function called printRectangleVolume2 which has input parameters called height and area. The function will calculate and print the volume of a rectangular solid.
+Call printRectangleVolume2 using function composition. The height argument has a value of 6 and the area argument is the return from function calcRectangleArea, called with a length of 4 and a width of 5.
+Print the area of a circle.
+Write a function called printCircleArea which has an input parameter called radius. The function will calculate the area of the circle and print it in a descriptive sentence. Use Python's pi constant in your calculation. To do this, you will need to import the math module (see Section 3.2 Math functions in the text). Add the line Import math to the top of your script. Then use math.pi in your circle area calculation.
+Call the printCircleArea function using a radius of 1.
+Write and call additional functions of your choice to calculate areas, perimeters, volumes, or surface areas of other geometric figures. Hint: you can use formulas from this handy site: geometry formulas
