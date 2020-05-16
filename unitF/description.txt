@@ -1,0 +1,61 @@
+Write a script using turtle to simulate a simple archery match between Archer A and Archer B.
+
+The match will be scored based on the point values of the target rings. If there is a tie, the tiebreaker will be the arrow closest to the center of the target.
+
+The lab is sufficiently complex that fairly detailed instructions have been provided. This should help you to complete the lab, and also to see how a more complex script can be structured.
+
+Structure your script as follows: initialization, then shooting, then determining the winner. There should be three functions: drawCircle, arrowShot and getScore. The main body of the script should use the following variables: dist, aScore, bScore, aMinDist, bMinDist, aColor, bColor (the a___ variables are for Archer A and the b___ variables are for Archer B).
+
+Initialization
+Main body of the script
+Create your turtle, set its shape to triangle, and hide it, using the hideturtle method (we don't want to see the turtle moving between arrow shots, although you may find it interesting to comment this out until you're ready to finish the lab). Set the initial values of aScore and bScore to zero. Set the initial values of aMinDist and aMinDist to a high value, say 300 (more on this later). Set aColor to lime and bColor to silver. Then draw three circles using the drawCircle function.
+
+drawCircle function
+The drawCircle function should have a radius parameter and a color parameter. It draws a circle centered on the starting point (the 0,0 point) of the specified size and color. You'll need to move away from the starting point by the radius distance, orient the turtle, and then draw the circle. If you use the forward approach instead of the goto approach, you'll also need to finish with the home method to return the turtle to the starting point.
+
+Hint: as the turtle isn't guaranteed to have the orientation you want when you draw the circle, use the setheading method within the function to orient the turtle (see https://docs.python.org/3/library/turtle.html#turtle.setheading ).
+
+Main body of the script
+Call drawCircle three times - first with radius 300 and color blue, then a second smaller circle on top of the first with radius 200 and color red, and the last circle with radius 100 and color yellow.
+
+Shooting
+Here we will be using the arrowShot and the getScore functions, which we will need to write.
+
+arrowShot function
+The arrowShot function should have a color parameter and a distance return. Start by lifting the pen, returning to the center point (use the home method), and by setting the turtle color to the specified color. The function works by generating a random distance and angle. To do this, we will need to use the randint function from Python's Random module. Near the top of the script, under the turtle import statement, add
+
+import random
+Back in the arrowShot function, we continue as follows:
+Calculate the distance from the center of the target to the point of impact with this code: (If you wish you may look at the documentation of the randint metod - optional - see https://docs.python.org/3/library/random.html#functions-for-integers ).
+
+    distance = random.randint(0,300) 
+Set the heading of the turtle with this code: (replace myturtle with the name you have given your turtle)
+
+    myturtle.setheading(random.randint(0,359))
+This gives us a random distance from 0 to 300 units, and has set a random angle from 0 to 359 degrees. Together, they tell us where the arrow has struck the target. Move the turtle forward by the calculated distance. Next, set the orientation of the turtle to north with the setheading method (again, see https://docs.python.org/3/library/turtle.html#turtle.setheading ).
+
+Then show the arrows position on the target with the stamp method. We change the turtle orientation before we stamp so we always have the point of the triangle pointing up. Lastly, the function returns the distance (we'll soon see why).
+
+getScore function
+The getScore function should have a distance parameter and a score return. If the arrow lands in the yellow center ring, it scores 10 points. If it lands in the middle red ring, it scores 7 points. If it lands in the outer blue ring, it scores 5 points. We can tell which ring the arrow is in from the distance parameter. If the distance is 0-100, then yellow. If 101-200, then red. If 201-300, then blue. Note that the arrowShot function doesn't allow an arrow to be more than 300 units from the center of the target.
+
+Main body of the script
+Now that we have the functions we need, we can get back to the main body of the script and start using them. First, Archer A gets three shots, then Archer B gets three shots. Start by calling the arrowShot function, passing the aColor variable. Save the returned distance in the dist variable - we will need it to calculate the score and, if necessary, the tiebreaking closest shot. Next, calculate the score of the shot by calling the getScore function, passing the dist variable and saving the returned score in the aScore variable. Lastly, compare dist with aMinDist. If dist is less than aMinDist (which we initially set to the maximum possible distance), then assign the dist value to aMinDist. This completes Archer A's first shot.
+
+We do the same three things for Archer A's next two shots (be sure that the score is cumulative). Then it's Archer B's turn for three shots. You'll note that we now have code that's redundant and not very compact, but it's the best we can do for now. Later when we learn loops and containers, you'll see how things can be done more neatly and efficiently.
+
+Determining the Winner
+Main body of the script
+Now that both archers have shot their three arrows, we can determine the winner and print the results to the shell. If one of archers has a higher score, declare them the winner and print the score. If the scores are tied, then see which archer has the arrow that is closest to the center - that archer is the winner. If they are still tied, then the match is a tie!
+
+When submitting this assignment on-line, submit both the .py file and an image file showing all the arrow hits with one of these extension: png jpg jpeg gif
+
+Debugging Hint: This script is complex enough that you won't always get the results that you expect, and you may not know why. A simple and invaluable debugging tool is simply to put in print statements at suspect areas of the code so you can see what variable values are at that point.
+
+OPTIONAL CHALLENGES: If you would like to extend the basic lab, some possible enhancements are listed below. These are simply for your learning and enjoyment, not for extra credit. You may do any or all of the challenges.
+
+Add a third archer - Archer C. This will make it harder to determine the winner..
+
+Allow arrows to completely miss the target - their score is zero and their impact point is not shown.
+
+Add a scoreboard in the upper left corner. It should have a row for each archer and six columns: the color triangle for that archer, their name, the score for each of the three shots, and the total score. Update the scoreboard after each shot. Use turtles write method (see https://docs.python.org/3/library/turtle.html#turtle.write ).
