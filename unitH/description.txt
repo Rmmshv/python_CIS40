@@ -1,0 +1,24 @@
+CIS 40
+Unit 8 Assignment
+Write a script that plays a simple dice game. The game is played between two players using a six-sided die.
+First, Player A rolls the die three times, then Player B rolls the die three times, and finally the dice totals are compared
+and a winner is declared. (Hint: use the randint function introduced in Lab 6 - each time you call it, it will generate a new
+random number).
+
+To keep a record of the dice rolls, write Player A's rolls into a file called Player_A.txt, with each roll being a separate 
+line. Similarly, Player B's rolls will be written into a file called Player_B.txt. Then, each player's dice rolls will be read
+from the files, added together, and the winner is determined (Hint: when writing integers to a file, they need to be converted
+to strings. Similarly, when you use the values from the file, you must convert them back to int.) Print the results of the game,
+identifying the winning player and the score (if there was a tie, print the score).
+
+OPTIONAL CHALLENGES:
+If you would like to extend the basic lab, some possible enhancements are listed below.
+These are simply for your learning and enjoyment, not for extra credit. You may do any or all of the challenges.
+
+After the game has been played, ask if you would like to play again. If "Y" or "y", play another game. If anything else, quit.
+Assuming that multiple games are being played, show the cumulative win/loss record.
+Assuming that multiple games are being played, change the rules of the game so that the loser of current game gets an
+additional roll. This additional roll is kept, which means that, for example, after 10 games,
+Player A might have 9 rolls (3 original rolls plus 6 rolls for having lost 6 games)
+and Player B 7 rolls (3 original rolls plus 4 rolls for having lost 4 games).
+For each game, show how many rolls each player has.
