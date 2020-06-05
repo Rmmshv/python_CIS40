@@ -1,0 +1,71 @@
+CIS 40
+Unit 9 Assignment
+
+                                                    Specifications and Requirements
+Write a script that will allow a user to search in a text file to find video games that match their interests.
+
+Let the user enter from one to four tags that describe the sort of game that they are interested in.
+Search through a text file that has a list of games. Find and save games that match the user's tags.
+Each game in the text file is on it's own line. Each of these lines starts with the one-word name of the game, 
+followed by one to five one-word tags that describe the game.
+Print the number of games that match the user tags. If there are one or more games that qualify,
+print a list of those games.
+
+                                                    Design/Pseudocode
+Prompt the user to enter one to four tags
+Split the user input into a list of user tags
+Calculate the number of user tags
+
+Open the games text file
+Initialize an empty list of matching games
+For each line in the games text file
+        Set the matchcount variable to zero
+        Split the line into a list of game info
+        For each tag in the user tag list
+               If the tag is in the game info list
+                       Increment the matchcount variable
+        If the matchcount is equal to the number of user tags
+               Add the name of the game to the list of matching games
+If there are no matching games
+        Print Sorry, no games match your criteria
+Else
+        Print the count of matching games and a list of the games
+
+                                                    Testing
+Test each part of the program as it is written - getting the user tags, finding the matching games, and printing the results.
+Test using the Action tag. There should be 19 results.
+Test using the Adventure and Arcade tags. There should be 4 results.
+Test using the Casual, Funny and Horror tags. There should be 2 results.
+Test using the Horror, Indie and Puzzle tags. There should be 0 results.
+Test using the Boardgame tag (Boardgame isn't represented in the game file). There should be 0 results.
+
+                                                   Additional Information
+This project is similar to the Computer Class project demonstrated in the videos referenced
+on page 17 of the Containers and Lists slideshow. Much of the code for this project can be taken from 
+the Computer Class project, but a key difference is that instead of matching on a single criteria, 
+this project can require matches on multiple criteria.
+
+The name of the game text file is Lab9_CatGames.txt and the file is located in Canvas. 
+You will need to copy this file to your local working directory.
+Log in to Catalyst.
+Select CIS 40.
+Select files.
+Select Lab9_CatGames.txt
+Move your cursor to the right of the green checkmark icon.
+Click the down arrow next to the gear.
+Click Download
+Click Save File and OK
+The file should be on your desktop or download directory
+The game file has 75 games, and there are 12 possible descriptive tags 
+(Action, Adventure, Arcade, Casual, Funny, Horror, Indie, Puzzle, Racing, RPG, Simulation, Strategy). 
+Tags for each game are unique - there are no duplicates.
+
+OPTIONAL CHALLENGE: If you would like to extend the basic lab, a possible enhancement is listed below. 
+This is simply for your learning and enjoyment, not for extra credit.
+
+Write a script to generate your own list of games with random tags. Use Notepad to create a file with a list 
+of game names (without tags). Then create a second file with a list of tags. Your script should create a Lab9_MyGames.txt
+file with data that comes from the two files that you created in Notepad. Each game should have from one to five
+tags (use random to determine the number of tags). All of the tags for a game must be unique - there should not be
+any duplicate tags. Hint: before selecting tags for a game, shuffle the tag list using the shuffle function in the random
+module ( See 9.6.3).
