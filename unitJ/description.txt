@@ -1,0 +1,66 @@
+CIS 40
+Unit 10 Assignment
+Specifications and Requirements
+Write a script that creates and uses a ParkingLot class which helps to control automated parking lots.
+Both the class code and the code in the main body of the script should be in the same script file (as shown in 
+the unit 10 example script).
+
+The ParkingLot class should have the following six methods (all of which require the self parameter as well as 
+any other additional parameters):
+
+__init__
+Parameters used to initialize data variables are: name, totalSpaces, filledSpaces. There is no return.
+
+__str__
+No additional parameters. Return a string with the name of the lot, the number of filled parking spaces, and the total
+number of parking spaces.
+
+letCarIn
+No additional parameters. If the lot has available spaces, add one to the filledSpaces data variable and return a string 
+that says "Open Gate". If the lot has no available spaces, return a string that says "Lot full, gate stays closed".
+
+letCarOut
+No additional parameters. Subtract one from the filledSpaces data variable and return a string that says "Open gate".
+
+lotStatus
+No additional parameters. If the lot has available spaces, return a string that says "Spaces available", otherwise,
+return a string that says "No spaces available".
+
+getFilledSpaces
+No additional parameters. Return the value of the filledSpaces data variable.
+
+Main body of the script
+Copy and paste the following code to test your ParkingLot class:
+lot1 = ParkingLot("Downtown", 80, 79)
+lot2 = ParkingLot("Northside", 40, 20)
+print(lot1)
+print(lot1.lotStatus())
+gateAction = lot1.letCarIn()
+print(gateAction)
+print(lot1.lotStatus())
+gateAction = lot1.letCarIn()
+print(gateAction)
+gateAction = lot1.letCarOut()
+print(gateAction)
+print(lot1)
+print(lot2)
+Test Results
+Test results should show as follows:
+
+Lot: Downtown
+Filled spaces: 79
+Total spaces: 80
+
+Spaces available
+Open gate
+No spaces available
+Lot full, gate stays closed
+Open gate
+Lot: Downtown
+Filled spaces: 79
+Total spaces: 80
+
+Lot: Northside
+Filled spaces: 20
+Total spaces: 40
+OPTIONAL CHALLENGES: There are no optional challenges this week. Instead, work on the final project.
